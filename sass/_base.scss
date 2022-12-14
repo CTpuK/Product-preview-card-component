@@ -1,0 +1,32 @@
+// COLOR VARIABLES
+$color-green: #3c8067; // btn & numbers
+$color-background-cream: #f2ebe3; // general background
+
+$color-card-bg-white: #fff; // card backgroung
+$color-heading-dark-blue: #1c232b; // main card heading
+$color-price-grey-blue: #6c7289; // secondary price
+
+// FONT VARIABLES
+$font-primary: "Montserrat", sans-serif;
+$font-display: "Fraunces", serif;
+
+// RESPONSIVE BREAKPOINTS
+// $bp-mobile: ;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+  color: red;
+}
