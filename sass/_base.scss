@@ -5,13 +5,14 @@ $color-background-cream: #f2ebe3; // general background
 $color-card-bg-white: #fff; // card backgroung
 $color-heading-dark-blue: #1c232b; // main card heading
 $color-price-grey-blue: #6c7289; // secondary price
+$color-btn-hover: #1a4032; // button hover
 
 // FONT VARIABLES
 $font-primary: "Montserrat", sans-serif;
 $font-display: "Fraunces", serif;
 
 // RESPONSIVE BREAKPOINTS
-// $bp-mobile: ;
+$bp-mobile: 23.4em; // 375px mobile version;
 
 *,
 *::before,
@@ -27,17 +28,15 @@ html {
 }
 
 body {
-  font-size: 1.4rem;
   font-family: $font-primary;
+  font-size: 1.4rem;
   background-color: $color-background-cream;
-}
-
-.container {
   width: 144rem;
 }
 
 .card {
   display: flex;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -48,19 +47,20 @@ body {
   background-color: $color-card-bg-white;
 
   overflow: hidden;
-
   border-radius: 10px;
 
-  &__image {
-    .img {
-      width: 30rem;
-      height: 45rem;
-    }
-  }
+  &__content {
+    padding: 3.2rem;
 
-  &__text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  &__pricing {
+    display: flex;
+    align-items: center;
     gap: 3rem;
   }
 }
