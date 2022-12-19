@@ -21,7 +21,10 @@
 
   <section class="card">
 
-    <img src="images/image-product-desktop.jpg" alt="Parfum Gabrielle CHANEL" class="card__img-desk">
+    <picture>
+      <source media="(max-width: 23.4em)" srcset="images/image-product-mobile.jpg" width="343px" height="240px">
+      <img src="images/image-product-desktop.jpg" alt="Parfum CHANEL" class="card__img-desk">
+    </picture>
 
     <div class="card__content">
 
@@ -40,11 +43,8 @@
           <span class="btn__text">Add to Cart</span>
         </button>
       </div>
-
     </div>
 
-    <!-- Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>. -->
   </section>
 
 </body>

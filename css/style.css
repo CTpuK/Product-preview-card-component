@@ -12,37 +12,47 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
-  background-color: #f2ebe3;
-  width: 144rem; }
+  background-color: #f2ebe3; }
 
 .card {
-  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 60rem;
-  height: 45rem;
+  width: 34.3rem;
+  height: 61.1rem;
   background-color: #fff;
   overflow: hidden;
-  border-radius: 10px; }
+  border-radius: 10px;
+  color: #6c7289; }
+  @media only screen and (min-width: 23.4em) {
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60rem;
+      height: 45rem; }
+      .card__img-desk {
+        width: 30rem;
+        height: 45rem; } }
   .card__content {
-    padding: 3.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 3.2rem;
     gap: 2.5rem; }
+    @media only screen and (max-width: 23.4em) {
+      .card__content {
+        padding: 2.5rem;
+        gap: 1.5rem; } }
   .card__pricing {
     display: flex;
     align-items: center;
-    gap: 3rem; }
+    gap: 2.8rem; }
 
 .perfume {
-  font-weight: 500;
   font-size: 1.2rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.5rem;
-  color: #6c7289; }
+  letter-spacing: 0.5rem; }
 
 .heading {
   font-family: "Fraunces", serif;
@@ -51,24 +61,17 @@ body {
   color: #1c232b; }
 
 .description {
-  font-weight: 500;
   font-size: 1.4rem;
-  line-height: 2.3rem;
-  color: #6c7289; }
+  line-height: 2.3rem; }
 
 .new-price {
   font-family: "Fraunces", serif;
-  font-weight: 700;
   font-size: 3.2rem;
-  line-height: 3.2rem;
   color: #3c8067; }
 
 .old-price {
   font-size: 1.3rem;
-  font-weight: 500;
-  font-weight: 2.3rem;
-  text-decoration: line-through;
-  color: #6c7289; }
+  text-decoration: line-through; }
 
 .btn {
   background-color: #3c8067;
@@ -80,7 +83,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s; }
+  transition: background-color 0.3s; }
+  @media only screen and (max-width: 23.4em) {
+    .btn {
+      width: 100%; } }
   .btn:hover {
     background-color: #1a4032; }
   .btn__icon {
