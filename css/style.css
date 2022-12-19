@@ -39,6 +39,10 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 2.5rem; }
+    @media only screen and (max-width: 23.4em) {
+      .card__content {
+        padding: 2.5rem;
+        gap: 1.8rem; } }
   .card__pricing {
     display: flex;
     align-items: center;
