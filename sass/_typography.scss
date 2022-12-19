@@ -1,20 +1,17 @@
-.perfume {
-  font-weight: 500;
+.card__category {
   font-size: 1.2rem;
-  line-height: 1.5rem;
   letter-spacing: 0.5rem;
   color: $color-price-grey-blue;
 }
 
-.heading {
+.card__title {
   font-family: $font-display;
   font-size: 3.2rem;
   line-height: 3.2rem;
   color: $color-heading-dark-blue;
 }
 
-.description {
-  font-weight: 500;
+.card__description {
   font-size: 1.4rem;
   line-height: 2.3rem;
   color: $color-price-grey-blue;
@@ -22,16 +19,12 @@
 
 .new-price {
   font-family: $font-display;
-  font-weight: 700;
   font-size: 3.2rem;
-  line-height: 3.2rem;
   color: $color-green;
 }
 
 .old-price {
   font-size: 1.3rem;
-  font-weight: 500;
-  font-weight: 2.3rem;
   text-decoration: line-through;
   color: $color-price-grey-blue;
 }
