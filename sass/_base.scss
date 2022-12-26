@@ -1,3 +1,9 @@
+// 1920px - Extra Large Screens
+// 1200px - Desktops, Large Screen
+// 1024px - Small Screens
+// 768px - Ipad
+// 480px - Mobile
+
 // COLOR VARIABLES
 $color-green: #3c8067; // btn & numbers
 $color-background-cream: #f2ebe3; // general background
@@ -12,7 +18,10 @@ $font-primary: "Montserrat", sans-serif;
 $font-display: "Fraunces", serif;
 
 // RESPONSIVE BREAKPOINTS
-$bp-mobile: 23.4em; // 375px mobile version;
+$bp-small: 49.3em; // 900px small version
+$bp-medium: 56.2em; // 900px small version
+$bp-large: 61.2em; // 1000px large version
+$bp-largest: 82.5em; // 1000px large version
 
 *,
 *::before,
@@ -25,24 +34,70 @@ $bp-mobile: 23.4em; // 375px mobile version;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (min-width: $bp-large) and (max-width: $bp-largest) {
+    font-size: 55%;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 40%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 62.5%;
+  }
 }
 
 body {
   font-family: $font-primary;
-  font-size: 1.4rem;
   background-color: $color-background-cream;
-  position: relative;
 }
 
 .card {
-  width: 50%;
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
   background-color: $color-card-bg-white;
-
   overflow: hidden;
   border-radius: 10px;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+
+    max-height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    padding: 3.3rem;
+    max-width: 50%;
+
+    @media only screen and (max-width: $bp-small) {
+      max-width: 100%;
+      gap: 2.5rem;
+      padding: 3.3rem;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    align-items: center;
+  }
+
+  .new-price {
+    margin-right: 2.1rem;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+  }
 }
