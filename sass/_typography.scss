@@ -1,30 +1,46 @@
-.card__category {
-  font-size: 1.2rem;
-  letter-spacing: 0.5rem;
-  color: $color-price-grey-blue;
-}
-
-.card__title {
-  font-family: $font-display;
+%card-main-typography {
+  font-family: var(--font-display);
   font-size: 3.2rem;
-  line-height: 3.2rem;
-  color: $color-heading-dark-blue;
 }
 
-.card__description {
-  font-size: 1.4rem;
-  line-height: 2.3rem;
-  color: $color-price-grey-blue;
+%card-main-color {
+  color: var(--color-price-grey-blue);
 }
 
-.new-price {
-  font-family: $font-display;
-  font-size: 3.2rem;
-  color: $color-green;
-}
+.card {
+  &__category {
+    @extend %card-main-color;
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+  }
 
-.old-price {
-  font-size: 1.3rem;
-  text-decoration: line-through;
-  color: $color-price-grey-blue;
+  &__title {
+    @extend %card-main-typography;
+    line-height: 3.2rem;
+    color: var(--color-heading-dark-blue);
+  }
+
+  &__description {
+    @extend %card-main-color;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+  }
+
+  &__new-price {
+    @extend %card-main-typography;
+    color: var(--color-green);
+  }
+
+  &__old-price {
+    @extend %card-main-color;
+    font-size: 1.3rem;
+    text-decoration: line-through;
+  }
+
+  &__btn-text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: var(--color-card-bg-white);
+    font-weight: 700;
+  }
 }

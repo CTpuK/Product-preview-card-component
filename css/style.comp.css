@@ -1,0 +1,107 @@
+:root {
+  --color-green: #3c8067;
+  --color-background-cream: #f2ebe3;
+  --color-card-bg-white: #fff;
+  --color-heading-dark-blue: #1c232b;
+  --color-price-grey-blue: #6c7289;
+  --color-btn-hover: #1a4032;
+  --font-primary: "Montserrat", sans-serif;
+  --font-display: "Fraunces", serif; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background-cream); }
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 30rem);
+  background-color: var(--color-card-bg-white);
+  border-radius: 10px;
+  overflow: hidden; }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem; }
+    @media only screen and (max-width: 48em) {
+      .card__content {
+        gap: 2rem;
+        padding: 2.5rem; } }
+  .card__pricing {
+    display: flex;
+    align-items: center; }
+  .card__old-price {
+    margin-left: 1.9rem; }
+  .card__img {
+    width: 100%;
+    height: 100%; }
+  .card-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 48em) {
+    .card {
+      grid-template-columns: minmax(34.3rem, 1fr); } }
+
+.card__title, .card__new-price {
+  font-family: var(--font-display);
+  font-size: 3.2rem; }
+
+.card__category, .card__description, .card__old-price {
+  color: var(--color-price-grey-blue); }
+
+.card__category {
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem; }
+
+.card__title {
+  line-height: 3.2rem;
+  color: var(--color-heading-dark-blue); }
+
+.card__description {
+  font-size: 1.4rem;
+  line-height: 2.3rem; }
+
+.card__new-price {
+  color: var(--color-green); }
+
+.card__old-price {
+  font-size: 1.3rem;
+  text-decoration: line-through; }
+
+.card__btn-text {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--color-card-bg-white);
+  font-weight: 700; }
+
+.card__btn {
+  background-color: var(--color-green);
+  width: 100%;
+  height: 4.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s; }
+  .card__btn-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.1rem; }
+  .card__btn:hover {
+    background-color: var(--color-btn-hover); }

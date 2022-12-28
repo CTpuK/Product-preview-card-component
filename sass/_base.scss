@@ -1,3 +1,5 @@
+// Breakpoints
+
 // 1920px - Extra Large Screens
 // 1200px - Desktops, Large Screen
 // 1024px - Small Screens
@@ -5,23 +7,24 @@
 // 480px - Mobile
 
 // COLOR VARIABLES
-$color-green: #3c8067; // btn & numbers
-$color-background-cream: #f2ebe3; // general background
 
-$color-card-bg-white: #fff; // card backgroung
-$color-heading-dark-blue: #1c232b; // main card heading
-$color-price-grey-blue: #6c7289; // secondary price
-$color-btn-hover: #1a4032; // button hover
+:root {
+  --color-green: #3c8067; // btn & numbers
+  --color-background-cream: #f2ebe3; // general background
 
-// FONT VARIABLES
-$font-primary: "Montserrat", sans-serif;
-$font-display: "Fraunces", serif;
+  --color-card-bg-white: #fff; // card backgroung
+  --color-heading-dark-blue: #1c232b; // main card heading
+  --color-price-grey-blue: #6c7289; // secondary price
+  --color-btn-hover: #1a4032; // button hover
+
+  // FONT VARIABLES
+
+  --font-primary: "Montserrat", sans-serif;
+  --font-display: "Fraunces", serif;
+}
 
 // RESPONSIVE BREAKPOINTS
-$bp-small: 49.3em; // 900px small version
-$bp-medium: 56.2em; // 900px small version
-$bp-large: 61.2em; // 1000px large version
-$bp-largest: 82.5em; // 1000px large version
+$bp-mobile: 48em; // 768px mobile version
 
 *,
 *::before,
@@ -34,56 +37,31 @@ $bp-largest: 82.5em; // 1000px large version
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
-
-  @media only screen and (min-width: $bp-large) and (max-width: $bp-largest) {
-    font-size: 55%;
-  }
-
-  @media only screen and (max-width: $bp-large) {
-    font-size: 40%;
-  }
-
-  @media only screen and (max-width: $bp-small) {
-    font-size: 62.5%;
-  }
 }
 
 body {
-  font-family: $font-primary;
-  background-color: $color-background-cream;
+  font-family: var(--font-primary);
+  background-color: var(--color-background-cream);
 }
 
 .card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 30rem);
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-  background-color: $color-card-bg-white;
-  overflow: hidden;
+  background-color: var(--color-card-bg-white);
   border-radius: 10px;
-
-  @media only screen and (max-width: $bp-small) {
-    flex-direction: column;
-
-    max-height: 100%;
-  }
+  overflow: hidden;
 
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
-    padding: 3.3rem;
-    max-width: 50%;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem;
 
-    @media only screen and (max-width: $bp-small) {
-      max-width: 100%;
-      gap: 2.5rem;
-      padding: 3.3rem;
+    @media only screen and (max-width: $bp-mobile) {
+      gap: 2rem;
+      padding: 2.5rem;
     }
   }
 
@@ -92,12 +70,23 @@ body {
     align-items: center;
   }
 
-  .new-price {
-    margin-right: 2.1rem;
+  &__old-price {
+    margin-left: 1.9rem;
   }
 
   &__img {
-    display: block;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-columns: minmax(34.3rem, 1fr);
   }
 }
